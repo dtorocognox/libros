@@ -1,0 +1,39 @@
+*{
+    font-family: Arial;
+}
+
+.bloque{
+    display: flex;
+    padding: 50px;
+}
+
+img{
+    padding-right: 20px;
+    width: 100px;
+    height: 200px;
+}
+
+.editorial{
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.titulo{
+    font-weight: bold;
+}
+
+.texto{
+    margin-top: 0;
+}
+
+#filtro{
+    display: flex;
+}
+
+#filtro>*{
+    padding-right: 55px;
+}
+
+#buscar{
+    margin-top: 0;
+}

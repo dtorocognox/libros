@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Libros</title>
+    <link  rel="stylesheet" type="text/css" href="libro.css">
     <script src="js/angular.min.js"></script>
 </head>
-<body>
-<div ng-controller="mcontroladorH">
-        <div ng-repeat="id in jSon | orderBy:'id'">
-            <img src="#" >
-        </div>
+
+<body ng-controller="mcontroladorH">
+<h1>Libros</h1>
+<div id="filtro">
+        <h4 id="buscar">Buscar</h4>
+    <div>
+        Título: <input type="text" ng-model="organizador">
     </div>
+    <div>
+        <select ng-options="x.id for x in jSon">
+            <!--<option ng-repeat="id in index" ng-model="opciones">{{id}}</option>-->
+        </select>
+    </div>
+</div>
+<div>
+        <div ng-repeat="libro in jSon | filter: organizador | orderBy: opciones" class="bloque">
+            <div>
+                <img ng-src="{{libro.img}}"/>
+            </div>
+            <div>
+                <a href="#" class="titulo">{{libro.titulo}}</a>
+                <p class="editorial">{{libro.editorial}}</p>
+                <p class="texto">{{libro.descripcion}}</p>
+            </div>
+        </div>
+</div>
 </body>
+
 <script
 src="https://code.jquery.com/jquery-3.1.1.min.js"
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
