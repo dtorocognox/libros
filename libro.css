@@ -2,15 +2,15 @@
     font-family: Arial;
 }
 
-.bloque{
-    display: flex;
-    padding: 50px;
-}
-
 img{
     padding-right: 20px;
     width: 100px;
     height: 200px;
+}
+
+.bloque{
+display: flex;
+padding: 50px;
 }
 
 .editorial{
